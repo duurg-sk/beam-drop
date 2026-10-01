@@ -1,0 +1,49 @@
+name: Build Desktop Apps (.exe & .app)
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Web Application
+        run: npm run build
+
+      - name: Package Desktop Executables (.exe on Windows, .app/.dmg on macOS)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            npx electron-builder --win nsis portable
+          elif [ "${{ runner.os }}" = "macOS" ]; then
+            npx electron-builder --mac dmg zip
+          fi
+        shell: bash
+
+      - name: Upload Desktop Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: beamdrop-${{ runner.os }}-desktop
+          path: |
+            release/*.exe
+            release/*.dmg
+            release/*.zip

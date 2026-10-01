@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.beamdrop.app",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7C:02:CD:EA:AC:71:16:40:1E:EB:CC:C9:E9:E2:6E:84:F1:62:95:07:3E:5D:84:7B:A5:A3:C4:4F:2E"
+      ]
+    }
+  }
+]

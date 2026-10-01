@@ -1,0 +1,10 @@
+{
+  "name": "BeamDrop - Ultra-Fast Local Wi-Fi P2P File Transfer",
+  "description": "High-speed encrypted peer-to-peer file transfer between Windows PC and Phone over local Wi-Fi with batch transfers, offline access, real-time progress, and transfer history.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

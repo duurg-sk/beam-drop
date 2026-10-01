@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bg-grad-sm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cyan-beam-sm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="192" height="192" rx="42" fill="url(#bg-grad-sm)"/>
+  <rect width="190" height="190" x="1" y="1" rx="41" fill="none" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Desktop icon -->
+  <g transform="translate(42, 54)">
+    <rect x="0" y="0" width="36" height="24" rx="4" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+    <line x1="18" y1="24" x2="18" y2="30" stroke="#06b6d4" stroke-width="2"/>
+    <line x1="10" y1="30" x2="26" y2="30" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Mobile phone icon -->
+  <g transform="translate(114, 98)">
+    <rect x="0" y="0" width="24" height="40" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <circle cx="12" cy="33" r="2" fill="#10b981"/>
+  </g>
+
+  <!-- Fast Beam -->
+  <path d="M 82 72 C 104 72, 94 116, 114 116" fill="none" stroke="url(#cyan-beam-sm)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Center Keyhole/Lock -->
+  <circle cx="96" cy="96" r="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <circle cx="96" cy="94" r="3" fill="#38bdf8"/>
+  <path d="M 96 97 L 96 102" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
